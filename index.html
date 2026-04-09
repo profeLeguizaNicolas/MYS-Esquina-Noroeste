@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagenes/icono.png" type="image/x-icon">
+    <title>Aproximación esquina Noroeste.</title>
+</head>
+<body>
+    <h1>Aproximación <code>Esquina Noroeste</code>.</h1>
+    <b>Introducción:</b>
+    <p>
+        El <code>método de la esquina Noroeste</code> es una técnica que se usa para resolver problemas de transporte o distribución. Consiste en encontrar una solución inicial que cumpla con todas las condiciones del problema, pero no garantiza que se consiga el costo más bajo posible.
+    </p>
+
+    <h3>Inicio del método.</h3>
+
+    <p>
+        Para iniciar con este método, primero analizaremos una tabla de ejemplo. En ella se plantea un problema de transporte donde tres depósitos deben abastecer a tres locales en distintas zonas.
+    </p>
+
+
+    <div class="center">
+        <img src="Imagenes/imagen1.png"   alt="">
+    </div>
+    <p>
+        El primer paso consiste en sumar la demanda de cada local <code class="gris">(Lanús, Banfield, Lomas de Zamora)</code> y compararla con la oferta total de los tres depósitos. A continuación, se muestra una imagen como ejemplo.
+    </p>
+    <div class="center">
+        <img src="Imagenes/imagen2.png"   alt="">
+    </div>
+    <p>
+        Como se puede observar, la oferta y la demanda son iguales, lo que permite continuar con el método de la esquina noroeste para encontrar una solución.
+    </p>
+    <fieldset>
+        <p>
+            Mas adelante, veremos qué hacer en caso de que la oferta y la demanda no coincidan.
+        </p>
+    </fieldset>
+    <p>
+        El segundo paso es iniciar las asignaciones. En el método de la esquina Noroeste, comenzamos desde la esquina superior izquierda, asignando la mayor cantidad posible.
+    </p>
+    <p>
+        En este caso, la primera asignación es del depósito 1 al local <code class="gris">Lanús</code>. La cantidad máxima asignable es <code>200 unidades</code>, ya que la demanda total de lanús es 200 y la oferta del depósito es 300. Luego de la asignación, Restamos este valor de la oferta, dejando un remanente de <code>100 undidades</code>.
+    </p>
+    <p>
+        A continuación, se muestra una imagen que ilustra este ejemplo.
+    </p>
+    <div class="center">
+        <img src="Imagenes/imagen3.png" alt="">
+    </div>
+    <p>
+        En la imagen se puede observar que las celdas correspondientes a los depósitos <b>2</b> y <b>3</b> para el local de <code class="gris">Lanús</code> están marcados en rojo. Esto se debe a que la demanda de <code class="gris">Lanús</code> ya ha sido satisfecha, aunque aún quedan <code>100 unidades disponibles</code> en el depósito <b>1</b>.
+    </p>
+    <p>
+        Siguiendo con las asignaciones, el siguiente destino a abastecer es <code class="gris">Banfield</code>. Como aun disponemos de <code>100 unidades</code> en el depósito <b>1</b>, las enviamos allí. Sin embargo, esto no cubre toda la demanda de <code class="gris">Banfield</code>, por lo que utilizamos <code>100 unidades</code> adicionales del depósito 2 completar su abastecimiento. 
+    </p>
+    <p>
+        Ahora solo queda asignar las unidades restantes al local de <code class="gris">Lomas de zamora</code>. Para ello, enviamos <code>50 unidades</code> desde el depósito 2 y 250 undidades desde el depósito 3. Con esto, logramos satisfacer por completo la demanda del local.
+    </p>
+    <p>
+        Una vez finalizadas todas las asignaciones, solo resta calculara el resultado de la solución inicial <code class="gris">S.I</code>.
+    </p>
+    <div class="center">
+        <img src="Imagenes/imagen4.png" alt="">
+    </div>
+    <p>
+        Para obtener el resultado de la solución inicial, es necesario multiplicar las unidades asignadas en cada celda por su respectivo costo de envío. Por ejemplo, para <code class="gris">Lanús</code>, se multiplica <code>200 x 5</code>.
+    </p>
+    <p>
+        Después de realizar todas las multiplicaciones correspondientes, sumamos los valores obtenidos para calcular el costo toal de la solución inicial.
+    </p>
+    <p>
+        A continuación, se muestra el cálculo detallado de esta solución.
+    </p>
+
+    <code class="gris" style="text-align: center;">(200 x 5) + (100 x 4) + (100 x 4) + (50 x 3) + (250 x 5) = 3200 S.I</code>
+
+    <p>
+        El resultado de nuestra solución inicial es <code class="gris">3200</code>. Esto significa que, al distribuir los productos utilizando el método de la <code>Esquina Noroeste</code>, el costo total es de <code class="gris">$3200</code>.
+    </p>
+    <p>
+        Sin embargo, es importante recordar que este es solo un punto de partida y no necesariamente la solución más eficiente.
+    </p>
+
+    <hr>
+    <br>
+    <p>
+        <b>Ejericicios: </b>Resuelva las siguientes tablas con el método de transporte <code>Esquina Noroeste</code>.
+    </p>
+    <ol>
+        <li>
+            <div class="center">
+                <img src="Imagenes/imagen5.png" alt="">
+            </div>
+        </li>
+        <li>
+            <div class="center">
+                <img src="Imagenes/imagen6.png" alt="">
+            </div>
+        </li>
+        <p>
+            El costo en la siguiente tabla se expresa en unidades de tiempo, donde los segundos se representan con <code class="gris">''</code> y los minutos con <code class="gris">'</code>. A continuación, se presenta la tabla de tarea: 
+        </p>
+        <li>
+            <div class="center">
+                <img src="Imagenes/imagen7.png" alt="">
+            </div>
+        </li>
+        <li>
+            <b>Enunciado:</b><br>
+            <p>
+                Para la elaboración de laa tabla de tareas, utilizamos los siguientes datos: La casa central de la empresa <code class="gris">DIA%</code> se encuentra ubicada en <code>Juan Francisco Seguí 4646, CABA</code>. Para esta tarea, se dispone de cinco vehículos con las siguientes características: 
+            </p>
+            <ul>
+                <li>
+                    <b>Fiat Fiorino</b>: Costo de <code class="gris">$50</code> por kilómetro y capacidad de <code class="gris">60</code> bultos.
+                </li>
+                <li>
+                    <b>Renault Kangoo</b>: Costo de <code class="gris">$55</code> por kilómetro y capacidad de <code class="gris">65</code> bultos.
+                </li>
+                <li>
+                    <b>Peugeot Partner</b>: Costo de <code class="gris">$65</code> por kilómetro y capacidad de <code class="gris">65</code> bultos.
+                </li>
+                <li>
+                    <b>Renault Trafic</b>: Costo de <code class="gris">$90</code> por kilómetro y capacidad de <code class="gris">90</code> bultos.
+                </li>
+                <li>
+                    <b>Fiat Ducato</b>: Costo de <code class="gris">$95</code> por kilómetro y capacidad de <code class="gris">90</code> bultos.
+                </li>
+            </ul>
+            <p>
+                Debemos satisfacer la demanda de 5 supermercados <code class="gris">DIA%</code> con las siguientes direcciones y demandas:
+            </p>
+            <ul>
+                <li>
+                    Supermercado <code class="gris">DIA%</code> en báez 222, CABA. Demanda de <code class="gris">78</code> bultos.
+                </li>
+                <li>
+                    Supermercado <code class="gris">DIA%</code> en Avenida Santa Fe 4550, CABA. Demanda de <code class="gris">70</code> bultos.
+                </li>
+                <li>
+                    Supermercado <code class="gris">DIA%</code> en Avenida Raúl Scalabrini Ortiz 3170, CABA. Demanda de <code class="gris">70</code> bultos.
+                </li>
+                <li>
+                    Supermercado <code class="gris">DIA%</code> en Fitz Roy 2292, CABA. Demanda de <code class="gris">74</code> bultos.
+                </li>
+                <li>
+                    Supermercado <code class="gris">DIA%</code> en Beruti 3434, CABA. Demanda de 74 bultos
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <p>
+        Una vez realizada la tabla de tareas, procederemos a obtener la solución inicial utilizando el método de esquina noroeste.
+    </p>
+    <hr>
+    
+</body>
+</html>
