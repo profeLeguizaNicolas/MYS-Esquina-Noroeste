@@ -1,1 +1,0 @@
-# MYS-Esquina-Noroeste
